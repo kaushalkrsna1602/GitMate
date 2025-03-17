@@ -18,9 +18,6 @@ const requestRouter = require("./routes/request");
 const profileRouter = require("./routes/profileRoute");
 const userRouter = require("./routes/user");
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
-});
 app.use("/", authRouter);
 app.use("/", profileRouter);
 app.use("/", requestRouter);
